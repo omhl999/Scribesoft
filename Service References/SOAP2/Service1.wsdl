@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="urn:TokenServer" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:TokenServer" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="TokenServerWSSOAPEndpoints_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:TokenServer/Imports">
+      <xsd:import schemaLocation="https://token.melissadata.net/v3/SOAP/Service.svc?xsd=xsd0" namespace="urn:TokenServer" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_QueryVersionInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryVersionInformation" />
+  </wsdl:message>
+  <wsdl:message name="IService_QueryVersionInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryVersionInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_QueryVersionUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryVersionUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IService_QueryVersionUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryVersionUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_RequestFreeToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:RequestFreeToken" />
+  </wsdl:message>
+  <wsdl:message name="IService_RequestFreeToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RequestFreeTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_RequestToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:RequestToken" />
+  </wsdl:message>
+  <wsdl:message name="IService_RequestToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RequestTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_CheckCredits_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckCredits" />
+  </wsdl:message>
+  <wsdl:message name="IService_CheckCredits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckCreditsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_QueryCustomerInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCustomerInfo" />
+  </wsdl:message>
+  <wsdl:message name="IService_QueryCustomerInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCustomerInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ConsumeCredits_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsumeCredits" />
+  </wsdl:message>
+  <wsdl:message name="IService_ConsumeCredits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsumeCreditsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ConsumeCreditsEx_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsumeCreditsEx" />
+  </wsdl:message>
+  <wsdl:message name="IService_ConsumeCreditsEx_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsumeCreditsExResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_PurchaseCredits_InputMessage">
+    <wsdl:part name="parameters" element="tns:PurchaseCredits" />
+  </wsdl:message>
+  <wsdl:message name="IService_PurchaseCredits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PurchaseCreditsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService">
+    <wsdl:operation name="QueryVersionInformation">
+      <wsdl:input wsaw:Action="urn:TokenServer/IService/QueryVersionInformation" message="tns:IService_QueryVersionInformation_InputMessage" />
+      <wsdl:output wsaw:Action="urn:TokenServer/IService/QueryVersionInformationResponse" message="tns:IService_QueryVersionInformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryVersionUpdate">
+      <wsdl:input wsaw:Action="urn:TokenServer/IService/QueryVersionUpdate" message="tns:IService_QueryVersionUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="urn:TokenServer/IService/QueryVersionUpdateResponse" message="tns:IService_QueryVersionUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestFreeToken">
+      <wsdl:input wsaw:Action="urn:TokenServer/IService/RequestFreeToken" message="tns:IService_RequestFreeToken_InputMessage" />
+      <wsdl:output wsaw:Action="urn:TokenServer/IService/RequestFreeTokenResponse" message="tns:IService_RequestFreeToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestToken">
+      <wsdl:input wsaw:Action="urn:TokenServer/IService/RequestToken" message="tns:IService_RequestToken_InputMessage" />
+      <wsdl:output wsaw:Action="urn:TokenServer/IService/RequestTokenResponse" message="tns:IService_RequestToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckCredits">
+      <wsdl:input wsaw:Action="urn:TokenServer/IService/CheckCredits" message="tns:IService_CheckCredits_InputMessage" />
+      <wsdl:output wsaw:Action="urn:TokenServer/IService/CheckCreditsResponse" message="tns:IService_CheckCredits_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCustomerInfo">
+      <wsdl:input wsaw:Action="urn:TokenServer/IService/QueryCustomerInfo" message="tns:IService_QueryCustomerInfo_InputMessage" />
+      <wsdl:output wsaw:Action="urn:TokenServer/IService/QueryCustomerInfoResponse" message="tns:IService_QueryCustomerInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsumeCredits">
+      <wsdl:input wsaw:Action="urn:TokenServer/IService/ConsumeCredits" message="tns:IService_ConsumeCredits_InputMessage" />
+      <wsdl:output wsaw:Action="urn:TokenServer/IService/ConsumeCreditsResponse" message="tns:IService_ConsumeCredits_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsumeCreditsEx">
+      <wsdl:input wsaw:Action="urn:TokenServer/IService/ConsumeCreditsEx" message="tns:IService_ConsumeCreditsEx_InputMessage" />
+      <wsdl:output wsaw:Action="urn:TokenServer/IService/ConsumeCreditsExResponse" message="tns:IService_ConsumeCreditsEx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseCredits">
+      <wsdl:input wsaw:Action="urn:TokenServer/IService/PurchaseCredits" message="tns:IService_PurchaseCredits_InputMessage" />
+      <wsdl:output wsaw:Action="urn:TokenServer/IService/PurchaseCreditsResponse" message="tns:IService_PurchaseCredits_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TokenServerWSSOAPEndpoint" type="tns:IService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QueryVersionInformation">
+      <soap:operation soapAction="urn:TokenServer/IService/QueryVersionInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryVersionUpdate">
+      <soap:operation soapAction="urn:TokenServer/IService/QueryVersionUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestFreeToken">
+      <soap:operation soapAction="urn:TokenServer/IService/RequestFreeToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestToken">
+      <soap:operation soapAction="urn:TokenServer/IService/RequestToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckCredits">
+      <soap:operation soapAction="urn:TokenServer/IService/CheckCredits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCustomerInfo">
+      <soap:operation soapAction="urn:TokenServer/IService/QueryCustomerInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsumeCredits">
+      <soap:operation soapAction="urn:TokenServer/IService/ConsumeCredits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsumeCreditsEx">
+      <soap:operation soapAction="urn:TokenServer/IService/ConsumeCreditsEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseCredits">
+      <soap:operation soapAction="urn:TokenServer/IService/PurchaseCredits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TokenServerWSSOAPEndpoints" type="tns:IService">
+    <wsp:PolicyReference URI="#TokenServerWSSOAPEndpoints_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QueryVersionInformation">
+      <soap:operation soapAction="urn:TokenServer/IService/QueryVersionInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryVersionUpdate">
+      <soap:operation soapAction="urn:TokenServer/IService/QueryVersionUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestFreeToken">
+      <soap:operation soapAction="urn:TokenServer/IService/RequestFreeToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestToken">
+      <soap:operation soapAction="urn:TokenServer/IService/RequestToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckCredits">
+      <soap:operation soapAction="urn:TokenServer/IService/CheckCredits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCustomerInfo">
+      <soap:operation soapAction="urn:TokenServer/IService/QueryCustomerInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsumeCredits">
+      <soap:operation soapAction="urn:TokenServer/IService/ConsumeCredits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsumeCreditsEx">
+      <soap:operation soapAction="urn:TokenServer/IService/ConsumeCreditsEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseCredits">
+      <soap:operation soapAction="urn:TokenServer/IService/PurchaseCredits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>

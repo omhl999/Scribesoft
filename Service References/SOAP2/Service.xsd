@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="urn:TokenServer" elementFormDefault="qualified" targetNamespace="urn:TokenServer" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="QueryVersionInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="package" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryVersionInformationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="QueryVersionInformationResult" type="tns:VersionInfoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VersionInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Result" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="VersionNumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ReleaseDate" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DownloadUrl" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ChangesUrl" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryVersionUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="package" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="currentVersion" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryVersionUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="QueryVersionUpdateResult" type="tns:VersionUpdateResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VersionUpdateResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Result" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="VersionNumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ReleaseDate" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DownloadUrl" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ChangesUrl" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestFreeToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="authorization" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="customerId" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="package" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="timespan" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestFreeTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="RequestFreeTokenResult" type="tns:RequestTokenResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RequestTokenResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Result" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Token" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="license" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="package" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ipAddress" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="RequestTokenResult" type="tns:RequestTokenResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckCredits">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="license" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="products" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="packages" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="quantity" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckCreditsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CheckCreditsResult" type="tns:CheckCreditsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CheckCreditsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Result" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Token" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="EstimatedCredits" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="UsingAutoRefill" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryCustomerInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="license" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="products" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="packages" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryCustomerInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="QueryCustomerInfoResult" type="tns:QueryCustomerInfoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="QueryCustomerInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Result" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CustomerId" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TotalCredits" type="xs:long" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TotalProductRecords" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TotalPackageRecords" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductRecord" type="tns:CustomerInfoProductRecord" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PackageRecord" type="tns:CustomerInfoPackageRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CustomerInfoProductRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Product" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Cost" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ProbabilityOfSuccess" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CustomerInfoPackageRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Package" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Status" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsumeCredits">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:ConsumeCreditsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ConsumeCreditsRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="License" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TotalProductRecords" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConsumeRecord" type="tns:ConsumeCreditsRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ConsumeCreditsRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Product" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Package" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Quantity" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsumeCreditsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ConsumeCreditsResult" type="tns:ConsumeCreditsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ConsumeCreditsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Result" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ConsumedCredits" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CreditBalance" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="UsingAutoRefill" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsumeCreditsEx">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:ConsumeCreditsExRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ConsumeCreditsExRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="License" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Source" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TotalProductRecords" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConsumeRecord" type="tns:ConsumeCreditsRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsumeCreditsExResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ConsumeCreditsExResult" type="tns:ConsumeCreditsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PurchaseCredits">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="authorization" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="customerId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="quantity" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PurchaseCreditsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="PurchaseCreditsResult" type="tns:PurchaseCreditsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="PurchaseCreditsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Result" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

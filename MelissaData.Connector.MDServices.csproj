@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D2C9161-6118-4830-A478-95EB826E1F7A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MelissaData.Connector.MDServices</RootNamespace>
+    <AssemblyName>MelissaData.Connector.MDServices</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\Program Files %28x86%29\Scribe Software\Scribe Online Agent\Connectors\MelissaData.Connector.MDServices\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Scribe.Core.Common">
+      <HintPath>ScribeSoft References\Debug\Scribe.Core.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Scribe.Core.ConnectorApi">
+      <HintPath>ScribeSoft References\Debug\Scribe.Core.ConnectorApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Services" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectorSetting.cs" />
+    <Compile Include="Connector.cs" />
+    <Compile Include="MetadataProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\SOAP2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SOAP3\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SOAP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceContainer.cs" />
+    <Compile Include="StandardConnectorSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\SOAP2\MelissaData.Connector.MDServices.SOAP2.CheckCreditsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SOAP2\MelissaData.Connector.MDServices.SOAP2.ConsumeCreditsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SOAP2\MelissaData.Connector.MDServices.SOAP2.PurchaseCreditsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SOAP2\MelissaData.Connector.MDServices.SOAP2.QueryCustomerInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SOAP2\MelissaData.Connector.MDServices.SOAP2.RequestTokenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SOAP2\MelissaData.Connector.MDServices.SOAP2.VersionInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SOAP2\MelissaData.Connector.MDServices.SOAP2.VersionUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SOAP2\Service.wsdl" />
+    <None Include="Service References\SOAP2\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SOAP2\Service1.wsdl" />
+    <None Include="Service References\SOAP3\AddressCheckSoap.wsdl" />
+    <None Include="Service References\SOAP3\GlobalAddress.wsdl" />
+    <None Include="Service References\SOAP3\GlobalAddress.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SOAP3\GlobalAddress1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SOAP3\MelissaData.Connector.MDServices.SOAP3.Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SOAP\ContactVerify.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SOAP\ContactVerify1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SOAP\ContactVerify2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SOAP\ContactVerify3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SOAP\ContactVerify31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SOAP\ContactVerify32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SOAP\MelissaData.Connector.MDServices.SOAP.Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SOAP\ServicemdContactVerifySOAP.wsdl" />
+    <None Include="Service References\SOAP\ServicemdContactVerifySOAP1.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SOAP2\" />
+    <WCFMetadataStorage Include="Service References\SOAP3\" />
+    <WCFMetadataStorage Include="Service References\SOAP\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SOAP\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SOAP\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SOAP\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SOAP2\Service.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SOAP2\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SOAP2\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SOAP2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SOAP3\GlobalAddress.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SOAP3\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SOAP3\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SOAP3\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

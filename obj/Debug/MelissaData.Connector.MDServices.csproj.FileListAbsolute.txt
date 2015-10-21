@@ -1,0 +1,29 @@
+C:\Dev\3rdPartyAdapters\MelissaData\Trunk\Code\MelissaData.Connector.MDServices\bin\Debug\MelissaData.Connector.MDServices.dll.config
+C:\Dev\3rdPartyAdapters\MelissaData\Trunk\Code\MelissaData.Connector.MDServices\bin\Debug\MelissaData.Connector.MDServices.dll
+C:\Dev\3rdPartyAdapters\MelissaData\Trunk\Code\MelissaData.Connector.MDServices\bin\Debug\MelissaData.Connector.MDServices.pdb
+C:\Dev\3rdPartyAdapters\MelissaData\Trunk\Code\MelissaData.Connector.MDServices\bin\Debug\Scribe.Core.Common.dll
+C:\Dev\3rdPartyAdapters\MelissaData\Trunk\Code\MelissaData.Connector.MDServices\bin\Debug\Scribe.Core.ConnectorApi.dll
+C:\Dev\3rdPartyAdapters\MelissaData\Trunk\Code\MelissaData.Connector.MDServices\obj\Debug\MelissaData.Connector.MDServices.csprojResolveAssemblyReference.cache
+C:\Dev\3rdPartyAdapters\MelissaData\Trunk\Code\MelissaData.Connector.MDServices\obj\Debug\MelissaData.Connector.MDServices.dll
+C:\Dev\3rdPartyAdapters\MelissaData\Trunk\Code\MelissaData.Connector.MDServices\obj\Debug\MelissaData.Connector.MDServices.pdb
+C:\Users\oscar\Desktop\MelissaData.Connector.MDServices (1)\MelissaData.Connector.MDServices\bin\Debug\MelissaData.Connector.MDServices.dll.config
+C:\Users\oscar\Desktop\MelissaData.Connector.MDServices (1)\MelissaData.Connector.MDServices\bin\Debug\MelissaData.Connector.MDServices.dll
+C:\Users\oscar\Desktop\MelissaData.Connector.MDServices (1)\MelissaData.Connector.MDServices\bin\Debug\MelissaData.Connector.MDServices.pdb
+C:\Users\oscar\Desktop\MelissaData.Connector.MDServices (1)\MelissaData.Connector.MDServices\bin\Debug\Scribe.Core.Common.dll
+C:\Users\oscar\Desktop\MelissaData.Connector.MDServices (1)\MelissaData.Connector.MDServices\bin\Debug\Scribe.Core.ConnectorApi.dll
+C:\Users\oscar\Desktop\MelissaData.Connector.MDServices (1)\MelissaData.Connector.MDServices\obj\Debug\MelissaData.Connector.MDServices.dll
+C:\Users\oscar\Desktop\MelissaData.Connector.MDServices (1)\MelissaData.Connector.MDServices\obj\Debug\MelissaData.Connector.MDServices.pdb
+C:\Program Files (x86)\Scribe Software\Scribe Online Agent\Connectors\MelissaData.Connector.MDServices\MelissaData.Connector.MDServices.dll.config
+C:\Program Files (x86)\Scribe Software\Scribe Online Agent\Connectors\MelissaData.Connector.MDServices\MelissaData.Connector.MDServices.dll
+C:\Program Files (x86)\Scribe Software\Scribe Online Agent\Connectors\MelissaData.Connector.MDServices\MelissaData.Connector.MDServices.pdb
+C:\Program Files (x86)\Scribe Software\Scribe Online Agent 2\Connectors\MelissaData.Connector.MDServices\MelissaData.Connector.MDServices.dll.config
+C:\Program Files (x86)\Scribe Software\Scribe Online Agent 2\Connectors\MelissaData.Connector.MDServices\MelissaData.Connector.MDServices.dll
+C:\Program Files (x86)\Scribe Software\Scribe Online Agent 2\Connectors\MelissaData.Connector.MDServices\MelissaData.Connector.MDServices.pdb
+C:\Users\oscar\Program Files (x86)\Scribe Software\Scribe Online Agent\Connectors\MelissaData.Connector.MDServices\MelissaData.Connector.MDServices.dll.config
+C:\Users\oscar\Program Files (x86)\Scribe Software\Scribe Online Agent\Connectors\MelissaData.Connector.MDServices\MelissaData.Connector.MDServices.dll
+C:\Users\oscar\Program Files (x86)\Scribe Software\Scribe Online Agent\Connectors\MelissaData.Connector.MDServices\MelissaData.Connector.MDServices.pdb
+C:\Users\oscar\Dropbox\MDScribe\Deployment\Melissa Data Deployment PackageV1.2\Project\obj\Debug\MelissaData.Connector.MDServices.csprojResolveAssemblyReference.cache
+C:\Users\oscar\Dropbox\MDScribe\Deployment\Melissa Data Deployment PackageV1.2\Project\obj\Debug\MelissaData.Connector.MDServices.dll
+C:\Users\oscar\Dropbox\MDScribe\Deployment\Melissa Data Deployment PackageV1.2\Project\obj\Debug\MelissaData.Connector.MDServices.pdb
+C:\Subversion\DQT_group\Plugins\Scribesoft\obj\Debug\MelissaData.Connector.MDServices.dll
+C:\Subversion\DQT_group\Plugins\Scribesoft\obj\Debug\MelissaData.Connector.MDServices.pdb

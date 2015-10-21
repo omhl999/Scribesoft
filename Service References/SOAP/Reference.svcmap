@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="11985b61-2a26-40f1-a2b1-641826d2e0d0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://personator.melissadata.net/v3/SOAP/ContactVerify?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ContactVerify3.xsd" MetadataType="Schema" ID="51f79531-4b4b-4dcf-a3ae-524522f59d70" SourceId="1" SourceUrl="https://personator.melissadata.net/v3/SOAP/ContactVerify?xsd=xsd2" />
+    <MetadataFile FileName="ServicemdContactVerifySOAP1.wsdl" MetadataType="Wsdl" ID="99c9af6d-02bd-41fc-9a83-c13b124d6ae7" SourceId="1" SourceUrl="https://personator.melissadata.net/v3/SOAP/ContactVerify?wsdl" />
+    <MetadataFile FileName="ContactVerify31.xsd" MetadataType="Schema" ID="3bfc560a-66a5-4f89-9eae-4e8d1f5a1d04" SourceId="1" SourceUrl="https://personator.melissadata.net/v3/SOAP/ContactVerify?xsd=xsd0" />
+    <MetadataFile FileName="ContactVerify32.xsd" MetadataType="Schema" ID="fa00a9f2-d79b-4c92-af50-fb8ea3c4550c" SourceId="1" SourceUrl="https://personator.melissadata.net/v3/SOAP/ContactVerify?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

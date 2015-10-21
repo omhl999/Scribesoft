@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8c5e7729-628b-44f8-a7fd-6da1a1c5a2f2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://address.melissadata.net/v3/SOAP/GlobalAddress" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AddressCheckSoap.wsdl" MetadataType="Wsdl" ID="6c235db9-208f-4803-a7ba-41979470de40" SourceId="1" SourceUrl="https://address.melissadata.net/v3/SOAP/GlobalAddress?wsdl" />
+    <MetadataFile FileName="GlobalAddress.xsd" MetadataType="Schema" ID="4435088b-922d-4ee2-aa4e-b6dc6d296549" SourceId="1" SourceUrl="https://address.melissadata.net/v3/SOAP/GlobalAddress?xsd=xsd0" />
+    <MetadataFile FileName="GlobalAddress.wsdl" MetadataType="Wsdl" ID="3989bdfb-8874-404d-b485-c824f77a86eb" SourceId="1" SourceUrl="https://address.melissadata.net/v3/SOAP/GlobalAddress?wsdl=wsdl0" />
+    <MetadataFile FileName="GlobalAddress1.xsd" MetadataType="Schema" ID="2d8044f2-417b-4a14-869d-9e443ef02b43" SourceId="1" SourceUrl="https://address.melissadata.net/v3/SOAP/GlobalAddress?xsd=xsd1" />
+    <MetadataFile FileName="GlobalAddress.disco" MetadataType="Disco" ID="0879c75d-85b7-4113-b3c6-151930792072" SourceId="1" SourceUrl="https://address.melissadata.net/v3/SOAP/GlobalAddress?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
